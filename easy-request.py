@@ -48,4 +48,10 @@ transactions = venmo.user.get_user_transactions(user_id=user.id, count=50)
 
 validTransactions = getTransactions(transactions)
 
-print(validTransactions.sum)
+target = 50
+
+print('\nTarget: ' + str(target))
+print('Raised: '+ str(validTransactions.sum))
+
+percent = validTransactions.sum/target
+print('Got ' + str(percent) +'% of target')
